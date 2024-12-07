@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <content>
+        <div class="tx1">
+            <div class="img">Изображение:</div>
+            <div><input type="txt" id="text1" value="Введите URL картинки"></div>
+            <div><input type="button" value="Сменить картинку" id="bt1"></div>
+            <p>Примеры URL: <br>https://wallpapers.com/images/hd/silly-cat-pictures-1600-x-1289-b0qw5gcu2akaheo8.jpg<br>img/img1.jpg        
+            </p>
+        </div>
+        <div class="tx2">
+            <div><input type="txt" id="text2" value="Текст"></div>
+        </div>
+        <div class="tx3">
+            <div><input type="txt" id="text3" value="Введите цвет фона (HEX)"></div>
+            <div><input type="txt" id="text4" value="Введите цвет текста (HEX)"></div>
+            <div><input type="button" id="bt2" value="Нажмите на кнопку"></div>
+            <p id="txt10">За окном уже сугробы... А, ещё нет.</p>
+        </div>
+        <div class="tx4">
+            <div><input type="txt" id="text5" value="Толщина"></div>
+            <div><input type="txt" id="text6" value="Цвет (HEX)"></div>
+            <div><input type="button" id="bt3" value="Применить"></div>
+            <table id="tb1">
+                <tbody>
+                    <tr><td>Расцветали</td><td>яблони</td><td>и</td><td>груши</td></tr>
+                    <tr><td>Поплыли</td><td>туманы</td><td>над</td><td>рекой</td></tr>                    
+                    <tr><td>Выходила</td><td>на</td><td>берег</td><td>Катюша</td></tr> 
+                    <tr><td>На</td><td>высокий</td><td>берег</td><td>на</td><td>крутой</td></tr>                    
+                    <tr><td>Всё...</td></tr>                   
+                </tbody>
+            </table>
+        </div>
+        <div class="tx5">
+            <div><input type="txt" id="text7" value=""></div>
+            <div><input type="txt" id="text8" value=""></div>
+            <span id="result">*Результат*</span>
+            <div><input type="button" id="bt4" value="Посчитать сумму"></div>
+        </div>
+    </content>
+    <script>
+
+        document.getElementById("bt1").onclick=function(){
+            document.querySelector(".img").innerHTML="<img src=\"img/img1.jpg\" alt class=\"i\">";
+            document.querySelector(".i").src=document.getElementById("text1").value;        
+        }
+
+        document.getElementById("text2").onmouseover=function(){
+            document.getElementById("text2").value="У текст";
+        }
+
+        document.getElementById("text2").onmouseout=function(){
+            document.getElementById("text2").value="Текст";
+        }
+
+        document.getElementById("bt2").onclick=function(){
+            document.getElementById("txt10").style.color=document.getElementById("text4").value;
+            document.getElementById("txt10").style.background=document.getElementById("text3").value;
+        }
+
+        document.getElementById("bt3").onclick=function(){
+            document.getElementById("tb1").style.border="10px solid green";
+            document.getElementById("tb1").style.border=document.getElementById("text5").value+"px solid "+document.getElementById("text6").value;
+        }
+
+        document.getElementById("bt4").onclick=function(){
+            document.getElementById("result").textContent=parseInt(document.getElementById("text7").value)+parseInt(document.getElementById("text8").value);
+        }
+    </script>
+</body>
+</html>
