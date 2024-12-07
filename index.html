@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <content>
+    <conteiner>
         <div class="tx1">
             <div class="img">Изображение:</div>
             <div><input type="txt" id="text1" value="Введите URL картинки"></div>
             <div><input type="button" value="Сменить картинку" id="bt1"></div>
-            <p>Примеры URL: <br>https://wallpapers.com/images/hd/silly-cat-pictures-1600-x-1289-b0qw5gcu2akaheo8.jpg<br>img/img1.jpg        
+            <p>Примеры URL: <br>https://wallpapers.com/images/hd/silly-cat-pictures-1600-x-1289-b0qw5gcu2akaheo8.jpg или можете ввести img/img1.jpg        
             </p>
         </div>
         <div class="tx2">
@@ -31,17 +31,14 @@
             <div><input type="button" id="bt3" value="Применить"></div>
             <table id="tb1">
                 <tbody>
-                    <tr><td>Расцветали</td><td>яблони</td><td>и</td><td>груши</td></tr>
-                    <tr><td>Поплыли</td><td>туманы</td><td>над</td><td>рекой</td></tr>                    
-                    <tr><td>Выходила</td><td>на</td><td>берег</td><td>Катюша</td></tr> 
-                    <tr><td>На</td><td>высокий</td><td>берег</td><td>на</td><td>крутой</td></tr>                    
-                    <tr><td>Всё...</td></tr>                   
+                    <tr><td>На</td><td>небе</td><td>звёзды</td><td>ярко</td><td>светят,</td></tr>
+                    <tr><td>И</td><td>ветер</td><td>листья</td><td>тихо</td><td>треплет.</td></tr>                                                 
                 </tbody>
             </table>
         </div>
         <div class="tx5">
-            <div><input type="txt" id="text7" value=""></div>
-            <div><input type="txt" id="text8" value=""></div>
+            <div><input type="txt" id="text7" value="Первое слагаемое"></div>
+            <div><input type="txt" id="text8" value="Второе слагаемое"></div>
             <span id="result">*Результат*</span>
             <div><input type="button" id="bt4" value="Посчитать сумму"></div>
         </div>
@@ -54,7 +51,7 @@
         }
 
         document.getElementById("text2").onmouseover=function(){
-            document.getElementById("text2").value="У текст";
+            document.getElementById("text2").value="^w^";
         }
 
         document.getElementById("text2").onmouseout=function(){
